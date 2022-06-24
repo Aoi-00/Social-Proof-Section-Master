@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* trying mobile-first design */
+
+:root {
+    --dark-magenta      : hsl(300, 43%, 22%);
+    --soft-pink         : hsl(333, 80%, 67%);
+    --dark-gray-magenta : hsl(303, 10%, 53%);
+    --light-gray-magenta: hsl(300, 24%, 96%);
+    --white             : hsl(0, 0%, 100%);
+    font-family         : 'League Spartan';
+}
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    max-width  : 100%;
+    min-height : 100vh;
+    display    : grid;
+    place-items: center;
+    text-align : center;
+}
+
+header>h1 {
+    color      : var(--dark-magenta);
+    font-weight: 700;
+    font-size: 40px;
+    padding    : 50px 50px 0 50px;
+    letter-spacing: -2px;
+}
+
+header>p {
+    color      : var(--dark-gray-magenta);
+    padding    : 20px 18px 40px 18px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.stars {
+    color        : var(--dark-magenta);
+    font-weight  : 700;
+    margin-bottom: 50px;
+}
+
+.stars>img {
+    padding: 3px;
+}
+
+.reviews {
+    background   : var(--dark-magenta);
+    border-radius: 8px;
+    margin       : 0 25px 15px 25px;
+    padding      : 30px 30px;
+    color        : var(--white);
+    font-weight  : 400;
+    font-size    : 17px;
+    text-align   : left;
+    line-height  : 1.5em;
+}
+
+.profile {
+    display              : grid;
+    grid-template-columns: repeat(1, 1fr 2fr 2fr);
+    grid-template-rows   : repeat(2, 1fr);
+    place-items          : center;
+    justify-items        : flex-start;
+    /* To get name and word align left!*/
+    line-height          : 1em;
+}
+
+.profile>img {
+    grid-row     : 1/3;
+    grid-column  : 1;
+    border-radius: 50%;
+    width        : 40px;
+    padding      : 10px;
+    margin-right : 10px;
+}
+
+.profile>p {
+    grid-column: 2/4;
+    grid-row   : 1;
+    align-self : flex-end;
+    font-weight: 700;
+}
+
+.profile>h3 {
+    grid-column: 2/4;
+    grid-row   : 2;
+    align-self : flex-start;
+    color      : var(--soft-pink);
+    font-weight: 500;
+    font-size  : 15px;
+}
+
+.attribution {
+    margin-top: 10px;
+}
+
+/* desktop changes when width>375px */
+@media (min-width:376px) {
+    body {
+        display            : grid;
+        grid-template-areas: "header ratings"
+            "reviews reviews"
+            "attribution attribution";
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 1fr 1fr 10px;
+    }
+    .attribution{
+        grid-area: attribution;
+        align-self: flex-start;
+        margin-top:0px;
+        padding-top:0px
+    } 
+    header {
+        grid-area: header;
+        align-self: center;
+        text-align: left;
+        padding: 80px 80px 0px 80px;
+       
+    }
+    header > h1 {
+        font-size: 60px;
+        padding-right: 40px;
+    }
+    header > p{
+        padding: 20px 30px 40px 50px;
+        font-size:18px;
+    }
+
+    .ratings {
+        grid-area: ratings;
+        align-self: flex-start;
+        margin-top: 100px;
+    }
+    .buyer-reviews {
+        grid-area: reviews;
+        display: flex;
+        max-width: 95vw;
+        box-sizing: border-box;
+        align-self: flex-start;
+        padding: 20px 80px 50px 80px;
+    }
+    .reviews{
+        margin: 0 15px;
+        width: minmax(auto,30%);
+        align-self: flex-start;
+        min-height: 180px;
+    }
+    .reviews:not(:first-child){ /* all non first childs */
+        margin-top: 15px;
+    }
+    .reviews:last-child{
+        margin-top:30px;
+    }
+
+    .ratings{
+        justify-self: center;
+        align-self: center;
+        margin-right: 100px;
+    }
+    .stars {
+        display: flex;
+        align-items: center;
+    }
+    .stars:nth-child(2){
+        margin-left:40px;
+    }
+    .stars:nth-child(3){
+        margin-left:80px;
+    }
+    .stars > p {
+        margin-left: 30px;
+    }
+    .stars > img {
+        margin-right: 5px;
+    }
+}
