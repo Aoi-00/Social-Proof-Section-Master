@@ -31,8 +31,8 @@ Users should be able to:
 ![Mobile 375px](./images/mobile%20375px.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Aoi-00/Social-Proof-Section-Master)
-- Live Site URL: [Add live site URL here](https://aoi-00.github.io/Social-Proof-Section-Master/)
+- Solution URL: [Source code](https://github.com/Aoi-00/Social-Proof-Section-Master)
+- Live Site URL: [Hosted site](https://aoi-00.github.io/Social-Proof-Section-Master/)
 
 ## My process
 
@@ -75,5 +75,5 @@ More practice on responsive layouts needed. Will be trying out Kevin Powell's fr
 
 - Github - [Lee Hong Ying](https://github.com/Aoi-00/)
 - Frontend Mentor - [@Aoi-00](https://www.frontendmentor.io/profile/Aoi-00)
-- Discord - [Aoi#2708]
+- Discord - [Aoi#2708](https://discordapp.com/users/Aoi#2708/)
 
